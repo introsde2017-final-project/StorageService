@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="user" type="{http://ws.adapter.introsde/}person" minOccurs="0"/>
- *         &lt;element name="weight" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="weight" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 public class WeightUpdate {
 
     protected Person user;
-    protected int weight;
+    protected double weight;
 
     /**
      * Recupera il valore della proprietà user.
@@ -64,7 +64,7 @@ public class WeightUpdate {
      * Recupera il valore della proprietà weight.
      * 
      */
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
@@ -72,7 +72,7 @@ public class WeightUpdate {
      * Imposta il valore della proprietà weight.
      * 
      */
-    public void setWeight(int value) {
+    public void setWeight(double value) {
         this.weight = value;
     }
 

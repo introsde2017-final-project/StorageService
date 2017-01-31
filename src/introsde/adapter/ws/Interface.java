@@ -92,7 +92,7 @@ public interface Interface {
         @WebParam(name = "user", targetNamespace = "")
         Person user,
         @WebParam(name = "weight", targetNamespace = "")
-        int weight);
+        double weight);
 
     /**
      * 

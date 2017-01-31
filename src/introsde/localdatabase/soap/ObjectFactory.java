@@ -32,9 +32,11 @@ public class ObjectFactory {
     private final static QName _UpdatePersonMeasureResponse_QNAME = new QName("http://soap.localdatabase.introsde/", "updatePersonMeasureResponse");
     private final static QName _DeletePersonResponse_QNAME = new QName("http://soap.localdatabase.introsde/", "deletePersonResponse");
     private final static QName _ReadPersonHistory_QNAME = new QName("http://soap.localdatabase.introsde/", "readPersonHistory");
+    private final static QName _GetPersonByChatId_QNAME = new QName("http://soap.localdatabase.introsde/", "getPersonByChatId");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://soap.localdatabase.introsde/", "updatePersonResponse");
     private final static QName _ReadPersonHistoryResponse_QNAME = new QName("http://soap.localdatabase.introsde/", "readPersonHistoryResponse");
     private final static QName _GetPeopleList_QNAME = new QName("http://soap.localdatabase.introsde/", "getPeopleList");
+    private final static QName _GetPersonByChatIdResponse_QNAME = new QName("http://soap.localdatabase.introsde/", "getPersonByChatIdResponse");
     private final static QName _UpdatePerson_QNAME = new QName("http://soap.localdatabase.introsde/", "updatePerson");
     private final static QName _ReadPersonMeasureResponse_QNAME = new QName("http://soap.localdatabase.introsde/", "readPersonMeasureResponse");
     private final static QName _ReadPersonMeasure_QNAME = new QName("http://soap.localdatabase.introsde/", "readPersonMeasure");
@@ -135,6 +137,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetPersonByChatId }
+     * 
+     */
+    public GetPersonByChatId createGetPersonByChatId() {
+        return new GetPersonByChatId();
+    }
+
+    /**
      * Create an instance of {@link UpdatePersonResponse }
      * 
      */
@@ -231,6 +241,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetPersonByChatIdResponse }
+     * 
+     */
+    public GetPersonByChatIdResponse createGetPersonByChatIdResponse() {
+        return new GetPersonByChatIdResponse();
+    }
+
+    /**
      * Create an instance of {@link Person.CurrentHealth }
      * 
      */
@@ -311,6 +329,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonByChatId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.localdatabase.introsde/", name = "getPersonByChatId")
+    public JAXBElement<GetPersonByChatId> createGetPersonByChatId(GetPersonByChatId value) {
+        return new JAXBElement<GetPersonByChatId>(_GetPersonByChatId_QNAME, GetPersonByChatId.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonResponse }{@code >}}
      * 
      */
@@ -335,6 +362,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.localdatabase.introsde/", name = "getPeopleList")
     public JAXBElement<GetPeopleList> createGetPeopleList(GetPeopleList value) {
         return new JAXBElement<GetPeopleList>(_GetPeopleList_QNAME, GetPeopleList.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonByChatIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.localdatabase.introsde/", name = "getPersonByChatIdResponse")
+    public JAXBElement<GetPersonByChatIdResponse> createGetPersonByChatIdResponse(GetPersonByChatIdResponse value) {
+        return new JAXBElement<GetPersonByChatIdResponse>(_GetPersonByChatIdResponse_QNAME, GetPersonByChatIdResponse.class, null, value);
     }
 
     /**

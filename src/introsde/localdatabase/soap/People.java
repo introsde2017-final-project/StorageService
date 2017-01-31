@@ -94,6 +94,21 @@ public interface People {
 
     /**
      * 
+     * @param chatId
+     * @return
+     *     returns introsde.localdatabase.soap.Person
+     */
+    @WebMethod
+    @WebResult(name = "person", targetNamespace = "")
+    @RequestWrapper(localName = "getPersonByChatId", targetNamespace = "http://soap.localdatabase.introsde/", className = "introsde.localdatabase.soap.GetPersonByChatId")
+    @ResponseWrapper(localName = "getPersonByChatIdResponse", targetNamespace = "http://soap.localdatabase.introsde/", className = "introsde.localdatabase.soap.GetPersonByChatIdResponse")
+    @Action(input = "http://soap.localdatabase.introsde/People/getPersonByChatIdRequest", output = "http://soap.localdatabase.introsde/People/getPersonByChatIdResponse")
+    public Person getPersonByChatId(
+        @WebParam(name = "chatId", targetNamespace = "")
+        Long chatId);
+
+    /**
+     * 
      * @param personId
      * @param measureType
      * @return

@@ -72,6 +72,11 @@ public class StorageImpl implements Storage{
 		return pInterface.deletePerson(id);
 	}
 
+	@Override
+	public Person getPersonByChatId(Long chatId) {
+		initialize();
+		return pInterface.getPersonByChatId(chatId);
+	}
 
 	@Override
 	public List<Measure> readPersonHistory(Long id, String measureType) {

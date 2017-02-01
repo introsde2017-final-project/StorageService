@@ -17,7 +17,7 @@ public class Publisher {
         {
             HOSTNAME = "localhost";
         }
-        String PORT = "6904";
+        String PORT = "6902";
         String BASE_URL = "/storage";
 
         if (String.valueOf(System.getenv("PORT")) != "null"){

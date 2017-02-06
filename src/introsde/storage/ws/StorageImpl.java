@@ -192,4 +192,18 @@ public class StorageImpl implements Storage{
 	}
 
 
+	@Override
+	public Recipe getRecipe(int id) {
+		initialize();
+		return aInterface.getRecipe(id);
+	}
+
+
+	@Override
+	public List<Recipe> searchRecipes(String s) {
+		initialize();
+		return aInterface.searchRecipes(s);
+	}
+
+
 }

@@ -13,6 +13,7 @@ import javax.jws.soap.SOAPBinding.Use;
 
 import introsde.adapter.ws.Exercise;
 import introsde.adapter.ws.Food;
+import introsde.adapter.ws.Recipe;
 import introsde.localdatabase.soap.Measure;
 import introsde.localdatabase.soap.Person;
 
@@ -84,6 +85,15 @@ public interface Storage {
     @WebMethod(operationName="searchFood")
     @WebResult(name="foods") 
     public List<Food> searchFood(@WebParam(name="text") String s);
+    
+    //Recipes
+    @WebMethod(operationName="getRecipe")
+    @WebResult(name="recipe") 
+    public Recipe getRecipe(@WebParam(name="recipeId") int id);
+    
+    @WebMethod(operationName="searchRecipes")
+    @WebResult(name="recipes") 
+    public List<Recipe> searchRecipes(@WebParam(name="text") String s);
     
     //Exercise Diary
     @WebMethod(operationName="getExerciseEntry")

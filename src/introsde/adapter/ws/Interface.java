@@ -126,6 +126,36 @@ public interface Interface {
 
     /**
      * 
+     * @param recipeId
+     * @return
+     *     returns introsde.adapter.ws.Recipe
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getRecipe", targetNamespace = "http://ws.adapter.introsde/", className = "introsde.adapter.ws.GetRecipe")
+    @ResponseWrapper(localName = "getRecipeResponse", targetNamespace = "http://ws.adapter.introsde/", className = "introsde.adapter.ws.GetRecipeResponse")
+    @Action(input = "http://ws.adapter.introsde/Interface/getRecipeRequest", output = "http://ws.adapter.introsde/Interface/getRecipeResponse")
+    public Recipe getRecipe(
+        @WebParam(name = "recipeId", targetNamespace = "")
+        int recipeId);
+
+    /**
+     * 
+     * @param text
+     * @return
+     *     returns java.util.List<introsde.adapter.ws.Recipe>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "searchRecipes", targetNamespace = "http://ws.adapter.introsde/", className = "introsde.adapter.ws.SearchRecipes")
+    @ResponseWrapper(localName = "searchRecipesResponse", targetNamespace = "http://ws.adapter.introsde/", className = "introsde.adapter.ws.SearchRecipesResponse")
+    @Action(input = "http://ws.adapter.introsde/Interface/searchRecipesRequest", output = "http://ws.adapter.introsde/Interface/searchRecipesResponse")
+    public List<Recipe> searchRecipes(
+        @WebParam(name = "text", targetNamespace = "")
+        String text);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<introsde.adapter.ws.Exercise>
      */

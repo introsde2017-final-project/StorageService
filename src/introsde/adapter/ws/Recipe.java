@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="fat" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="image" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="protein" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -39,6 +40,7 @@ import javax.xml.bind.annotation.XmlType;
     "description",
     "fat",
     "id",
+    "image",
     "name",
     "protein",
     "url"
@@ -50,6 +52,7 @@ public class Recipe {
     protected String description;
     protected double fat;
     protected int id;
+    protected String image;
     protected String name;
     protected double protein;
     protected String url;
@@ -140,6 +143,30 @@ public class Recipe {
      */
     public void setId(int value) {
         this.id = value;
+    }
+
+    /**
+     * Recupera il valore della proprietà image.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getImage() {
+        return image;
+    }
+
+    /**
+     * Imposta il valore della proprietà image.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setImage(String value) {
+        this.image = value;
     }
 
     /**

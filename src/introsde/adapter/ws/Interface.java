@@ -188,6 +188,7 @@ public interface Interface {
      * 
      * @param idExercise
      * @param minutes
+     * @param changeSleeping
      * @param user
      * @return
      *     returns boolean
@@ -203,7 +204,9 @@ public interface Interface {
         @WebParam(name = "id_exercise", targetNamespace = "")
         int idExercise,
         @WebParam(name = "minutes", targetNamespace = "")
-        int minutes);
+        int minutes,
+        @WebParam(name = "change_sleeping", targetNamespace = "")
+        boolean changeSleeping);
 
     /**
      * 

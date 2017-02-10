@@ -102,6 +102,9 @@ public interface Storage {
     @WebMethod(operationName="editExerciseEntry")
     public boolean editExerciseEntry(@WebParam(name="user") Person user, @WebParam(name="id_exercise") int id, @WebParam(name="minutes") int minutes);
     
+    @WebMethod(operationName="removeSleepTime")
+    public boolean removeSleepTime(@WebParam(name="user") Person user, @WebParam(name="minutes") int minutes);
+    
     @WebMethod(operationName="saveTemplate")
     public boolean saveTemplate(@WebParam(name="user") Person user, @WebParam(name="days") int days);
     

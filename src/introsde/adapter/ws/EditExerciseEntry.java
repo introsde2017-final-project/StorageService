@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="user" type="{http://ws.adapter.introsde/}person" minOccurs="0"/>
  *         &lt;element name="id_exercise" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="minutes" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="change_sleeping" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,7 +33,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "editExerciseEntry", propOrder = {
     "user",
     "idExercise",
-    "minutes"
+    "minutes",
+    "changeSleeping"
 })
 public class EditExerciseEntry {
 
@@ -40,6 +42,8 @@ public class EditExerciseEntry {
     @XmlElement(name = "id_exercise")
     protected int idExercise;
     protected int minutes;
+    @XmlElement(name = "change_sleeping")
+    protected boolean changeSleeping;
 
     /**
      * Recupera il valore della proprietà user.
@@ -95,6 +99,22 @@ public class EditExerciseEntry {
      */
     public void setMinutes(int value) {
         this.minutes = value;
+    }
+
+    /**
+     * Recupera il valore della proprietà changeSleeping.
+     * 
+     */
+    public boolean isChangeSleeping() {
+        return changeSleeping;
+    }
+
+    /**
+     * Imposta il valore della proprietà changeSleeping.
+     * 
+     */
+    public void setChangeSleeping(boolean value) {
+        this.changeSleeping = value;
     }
 
 }
